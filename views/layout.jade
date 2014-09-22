@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='A terse and powerful stylus library built on top of nib')
+    meta(name='author', content="Jeff Escalante")
+    title Axis
+    script(src="//use.typekit.net/ddj0mjr.js")
+    script.
+      try{Typekit.load();}catch(e){}
+    link(rel='stylesheet', href='/css/master.css')
+  body
+
+    header
+      h1 Axis
+      h2 a stylus mixin library built on top of nib
+
+    .contain
+      nav
+        ul
+          li Installation
+          li Usage
+          li Typography
+          li
+            | Buttons
+            ul
+              li.active button
+              li glossy-button
+
+          li Utilities
+
+      main
+        block content
+
+  script(src='/js/main.js')

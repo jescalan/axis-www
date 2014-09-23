@@ -1,27 +1,36 @@
 extends layout
 
 block content
-    h1 Buttons
-    p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
+  h1#buttons Buttons
+  p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
 
-    hr
+  each button in site.modules.buttons
+    +doc(button)
 
-    h3#button button(color, size)
-    p The basic button mixin, flat and simple, but scales very well to any size and can be quite flexible using options passed in.
+  h1#code Code
+  p A small collection of simple and polished styles for code blocks.
+  
+  each code in site.modules.code
+    +doc(code)
 
+
+//- This mixin renders the documentation block for each object
+mixin doc(fn)
+  hr
+
+  h3(id=fn.name)= fn.name + "(" + (fn.params ? Object.keys(fn.params) : '') + ")"
+  p= fn.description
+
+  if fn.params
     h4 Parameters
     dl
-      dt color
-      dd Any CSS color value, default blue.
+      each v, k in fn.params
+        dt= k
+        dd= v
 
-      dt size
-      dd Font size, no unit. Used to scale all other properties. Default 14.
+  h4 Examples
 
-    h4 Examples
-
+  each example in fn.examples
     .example
-      pre
-        | .selector
-        |   button()
-      .el
-        .btn click me!
+      pre= example.code
+      .el!= example.el

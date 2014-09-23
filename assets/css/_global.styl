@@ -38,17 +38,24 @@ nav
       font-weight: 500
       margin-bottom: 10px
       
+      a
+        reset-link()
+        color: #555
+      
       ul
         reset-list()
 
         li
           font-size: .8em
-          color: #798183
           margin-left: 15px
           margin: 6px 0 6px 15px
           
           &.active
             color: red
+          
+          a
+            reset-link()
+            color: #798183
 
 main
   group()

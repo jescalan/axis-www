@@ -17,18 +17,19 @@ html
       h2 a stylus mixin library built on top of nib
 
     .contain
+
+      - var modules = Object.getOwnPropertyNames(site.modules)
+      - modules.shift()
       nav
         ul
           li Installation
           li Usage
-          li Typography
-          li
-            | Buttons
-            ul
-              li.active button
-              li glossy-button
-
-          li Utilities
+          each module in modules
+            li
+              a(href='#'+module)= capitalize(module)
+              ul
+                each fn in site.modules[module]
+                  li: a(href='#'+fn.name)= fn.name
 
       main
         block content

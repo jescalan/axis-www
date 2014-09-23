@@ -9,10 +9,15 @@ block content
 
   h1#code Code
   p A small collection of simple and polished styles for code blocks.
-  
+
   each code in site.modules.code
     +doc(code)
 
+  h1#forms Forms
+  p Forms are a huge pain. This light set of mixins attempt to eliminate some of the pain without forcing your hand in regards to markup structure.
+
+  each form in site.modules.forms
+    +doc(form)
 
 //- This mixin renders the documentation block for each object
 mixin doc(fn)

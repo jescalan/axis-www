@@ -9,7 +9,7 @@ html
     script(src="//use.typekit.net/ddj0mjr.js")
     script.
       try{Typekit.load();}catch(e){}
-    link(rel='stylesheet', href='/css/master.css')
+    != css()
   body
 
     header
@@ -34,4 +34,4 @@ html
       main
         block content
 
-  script(src='/js/build.js')
+  != js()

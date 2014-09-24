@@ -1,47 +1,55 @@
 extends layout
 
 block content
-  h1#installation Installation
-  p Here are some instructions on how to install axis. Wow.
+  .instruction
+    h1#installation Installation
+    p Here are some instructions on how to install axis. Wow.
 
-  h1#usage Usage
-  p This is how to use axis
+  .instruction
+    h1#usage Usage
+    p This is how to use axis
 
-  h1#buttons Buttons
-  p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
+  .intro
+    h1#buttons Buttons
+    p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
 
-  each button in site.modules.buttons
-    +doc(button)
+  each button, i in site.modules.buttons
+    +doc(button, site.modules.buttons.length, i)
 
-  h1#code_blocks Code Blocks
-  p A small collection of simple and polished styles for code blocks.
+  .intro
+    h1#code_blocks Code Blocks
+    p A small collection of simple and polished styles for code blocks.
 
-  each code in site.modules.code_blocks
-    +doc(code)
+  each code, i in site.modules.code_blocks
+    +doc(code, site.modules.code_blocks.length, i)
 
-  h1#forms Forms
-  p Forms are a huge pain. This light set of mixins attempt to eliminate some of the pain without forcing your hand in regards to markup structure.
+  .intro
+    h1#forms Forms
+    p Forms are a huge pain. This light set of mixins attempt to eliminate some of the pain without forcing your hand in regards to markup structure.
 
-  each form in site.modules.forms
-    +doc(form)
+  each form, i in site.modules.forms
+    +doc(form, site.modules.forms.length, i)
 
 //- This mixin renders the documentation block for each object
-mixin doc(fn)
-  hr
+mixin doc(fn, i, length)
+  section
 
-  h3(id=fn.name)= fn.name + "(" + (fn.params ? Object.keys(fn.params) : '') + ")"
-  p= fn.description
+    h3(id=fn.name)= fn.name + "(" + (fn.params ? Object.keys(fn.params) : '') + ")"
+    p= fn.description
 
-  if fn.params
-    h4 Parameters
-    dl
-      each v, k in fn.params
-        dt= k
-        dd= v
+    if fn.params
+      h4 Parameters
+      dl
+        each v, k in fn.params
+          dt= k
+          dd= v
 
-  h4 Examples
+    h4 Examples
 
-  each example in fn.examples
-    .example
-      pre= example.code
-      .el!= example.el
+    each example in fn.examples
+      .example
+        pre= example.code
+        .el!= example.el
+
+  if i != length + 1
+    hr

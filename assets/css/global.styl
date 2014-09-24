@@ -108,11 +108,27 @@ main
     font-weight: 400
     -webkit-font-smoothing: subpixel-antialiased
     margin: 0
+    cursor: pointer
   
   h3
     font-family: fira-mono, monospace
     color: red
     margin-top: 0
+    cursor: pointer
+    position: relative
+    
+    &:before
+      content: ""
+      size: 12px
+      bg: 'link-icon.svg'
+      absolute: top 8px left -7px
+      opacity: 0
+      transition()
+      
+    &:hover
+      &:before
+        left: -20px
+        opacity: 1
   
   h4
     color: #6D6D6D

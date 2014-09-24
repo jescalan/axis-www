@@ -1,0 +1,4 @@
+- vendor/jquery.*
+- vendor/waypoints.*
+- vendor/waypoints-sticky.*
+- main.*

@@ -8,9 +8,10 @@
     "dynamic-content": "0.0.3",
     "jade": "1.x",
     "jeet": "6.x",
+    "js-pipeline": "0.1.x",
     "marked": "0.3.x",
-    "roots": "^3.0.0-rc.9",
     "rupture": "0.4.x",
+    "string": "2.x",
     "stylus": "0.48.x"
   }
 }

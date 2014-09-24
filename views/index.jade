@@ -1,16 +1,22 @@
 extends layout
 
 block content
+  h1#installation Installation
+  p Here are some instructions on how to install axis. Wow.
+
+  h1#usage Usage
+  p This is how to use axis
+
   h1#buttons Buttons
   p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
 
   each button in site.modules.buttons
     +doc(button)
 
-  h1#code Code
+  h1#code_blocks Code Blocks
   p A small collection of simple and polished styles for code blocks.
 
-  each code in site.modules.code
+  each code in site.modules.code_blocks
     +doc(code)
 
   h1#forms Forms

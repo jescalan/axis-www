@@ -1,12 +1,16 @@
 normalize-css()
 base()
 
+body, html
+  height: 100%
+
 *
   box-sizing: border-box
   font-family: freight-sans-pro
 
 .contain
   center()
+  height: 100%
 
 header
   group()
@@ -25,10 +29,20 @@ header
     font-size: 1em
     margin: 0
 
+.sticky-wrapper
+  width: 22%
+  height: 100%
+  float: left
+
 nav
   background: grey
   padding: 30px
-  col(1/4)
+  height: 100%
+
+  &.stuck
+    position: fixed
+    top: 0
+    width: 22%
 
   ul
     reset-list()
@@ -41,6 +55,10 @@ nav
       a
         reset-link()
         color: #555
+        transition()
+
+        &.active
+          color: red
       
       ul
         reset-list()
@@ -49,19 +67,12 @@ nav
           font-size: .8em
           margin-left: 15px
           margin: 6px 0 6px 15px
-          
-          &.active
-            color: red
-          
-          a
-            reset-link()
-            color: #798183
 
 main
   group()
   padding: 30px 30px 30px 0
-  max-width: 750px
-  col(3/4)
+  width: 73%
+  float: right
 
   h1
     font-size: 2em

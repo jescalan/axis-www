@@ -22,16 +22,16 @@ html
       - modules.shift()
       nav
         ul
-          li Installation
-          li Usage
-          each module in modules
-            li
-              a(href='#'+module)= capitalize(module)
+          li(data-id='installation'): a(href='#installation') Installation
+          li(data-id='usage'): a(href='#usage') Usage
+          each module in modules.sort()
+            li(data-id=module)
+              a(href='#'+module)= module.humanize()
               ul
                 each fn in site.modules[module]
-                  li: a(href='#'+fn.name)= fn.name
+                  li(data-id=fn.name): a(href='#'+fn.name)= fn.name
 
       main
         block content
 
-  script(src='/js/main.js')
+  script(src='/js/build.js')

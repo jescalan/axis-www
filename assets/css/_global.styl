@@ -53,14 +53,18 @@ nav
       
       a
         reset-link()
-        color: #555
         transition()
+        color: #555
+        
+        &:hover
+          opacity: .7
 
         &.active
           color: red
       
       ul
         reset-list()
+        display: none
 
         li
           font-size: .8em

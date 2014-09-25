@@ -1,0 +1,13 @@
+---
+name: "field"
+description: "Often times it's easier to wrap your input and label in a div so they can be floated, positioned, and manipulated without screwing up the rest of the form. That's what this mixin is for - put it on a div (perhaps with a class of 'field') that wraps a label and an input."
+params:
+  direction: "The direction in which you'd like the text and input to be aligned. Takes either 'left' or 'right', default is 'right'."
+  width: "Width of the div. Default is 370px."
+examples:
+  - code: ".field\n  field()"
+    el: "<div class='field'><label>Wow:</label><input type='text' /></div>"
+  - code: ".field\n  field: right 300px"
+    el: "<div class='field2'><label>Amaze:</label><input type='text' /></div>"
+_content: false
+---

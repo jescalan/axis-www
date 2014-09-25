@@ -1,0 +1,12 @@
+---
+name: "input-error"
+description: "When someone screwed it up, you gotta show them how it is. Put this on an input to make it clear that something bad has happened. Best implemented in an '.error' class or something like that."
+params:
+  color: "Color that it uses to highlight. Default is red."
+examples:
+  - code: "form .error\n  input-error()"
+    el: "<input type='text' class='input-error' value='oh no!' />"
+  - code: "form .error\n  input-error: #F99987"
+    el: "<input type='text' class='input-error2' value='you really messed up now' />"
+_content: false
+---

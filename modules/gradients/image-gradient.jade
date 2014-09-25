@@ -1,0 +1,17 @@
+---
+name: "image-gradient"
+description: "Exactly the same as the gradient mixin, but you can overlay an image to give it more texture."
+params:
+  color1: "Transitions starting at this color. If only this color is passed, lightens and darkend by 'strength' and creates a gradient with this color as the average. If you pass a second color, this is the top color and it transitions to the second."
+  color2: 'Optional, transitions from color1 to this one'
+  imagePath: 'Path to the image you want to overlay. It will repeat/tile, so make sure there are no seams. If you pass an image path instead of a color as the second argument, the args are all shifted left one spot.'
+  strength: "Percentage value, if you pass one color determines how much lighter and darker the top and bottom of the gradient should be. Default is 10%."
+examples:
+  - code: ".gradient\n  image-gradient: red 'pattern.svg'"
+    el: "<div class='image-gradient'></div>"
+  - code: ".gradient\n  gradient: red 'pattern.svg' 30%"
+    el: "<div class='image-gradient2'></div>"
+  - code: ".gradient\n  gradient: red blue 'pattern.svg'"
+    el: "<div class='image-gradient3'></div>"
+_content: false
+---

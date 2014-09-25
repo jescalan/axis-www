@@ -30,6 +30,14 @@ block content
   each form, i in site.modules.forms
     +doc(form, site.modules.forms.length, i)
 
+  .intro
+    h1#gradients Gradients
+    :markdown
+      While [nib's gradient helper](http://visionmedia.github.io/nib/) takes care of most situations and is automatically included, axis provides a couple of convenience methods for easily creating gradients.
+
+  each form, i in site.modules.gradients
+    +doc(form, site.modules.gradients.length, i)
+
 //- This mixin renders the documentation block for each object
 mixin doc(fn, i, length)
   section

@@ -52,6 +52,13 @@ block content
   each mxin, i in site.modules.tables
     +doc(mxin, site.modules.tables.length, i)
 
+  .intro
+    h1#typography Typography
+    p A set of helpers and beautiful defaults for all aspects of typography.
+
+  each mxin, i in site.modules.typography
+    +doc(mxin, site.modules.typography.length, i)
+
 //- This mixin renders the documentation block for each object
 mixin doc(fn, i, length)
   section

@@ -1,0 +1,11 @@
+---
+name: 'text-selection'
+description: "Sets the text select color intelligently based on the highlight-color variable found in the settings file. Intended to be used at the root, for the whole document rather than at one element."
+params:
+  color: 'Override the highlight background with a custom color. Defaults to highlight-color.'
+  textColor: 'Override the text color. Default is black or white based on contrast detection.'
+examples:
+  - code: "text-selection()"
+    el: "<p class='text-selection'>Try selecting me!</p>"
+_content: false
+---

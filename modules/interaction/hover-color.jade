@@ -1,0 +1,13 @@
+---
+name: 'hover-color'
+description: 'Will swap an elements color or background color on hover. Takes a color in any format as the first argument. Will first look for a background color to change, then a color.'
+params:
+  color: 'The color you want to transition to'
+  forceUseColor: 'If true, chooses color over background color first. Default false.'
+examples:
+  - code: ".selector\n  background: red\n  hover-color: black"
+    el: "<div class='hover-color'>background</div>"
+  - code: ".selector\n  background: red\n  color: white\n  hover-color: black true"
+    el: "<div class='hover-color2'>foreground</div>"
+_content: false
+---

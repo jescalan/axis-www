@@ -13,30 +13,37 @@ block content
     h1#buttons Buttons
     p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
 
-  each button, i in site.modules.buttons
-    +doc(button, site.modules.buttons.length, i)
+  each mxin, i in site.modules.buttons
+    +doc(mxin, site.modules.buttons.length, i)
 
   .intro
     h1#code_blocks Code Blocks
     p A small collection of simple and polished styles for code blocks.
 
-  each code, i in site.modules.code_blocks
-    +doc(code, site.modules.code_blocks.length, i)
+  each mxin, i in site.modules.code_blocks
+    +doc(mxin, site.modules.code_blocks.length, i)
 
   .intro
     h1#forms Forms
     p Forms are a huge pain. This light set of mixins attempt to eliminate some of the pain without forcing your hand in regards to markup structure.
 
-  each form, i in site.modules.forms
-    +doc(form, site.modules.forms.length, i)
+  each mxin, i in site.modules.forms
+    +doc(mxin, site.modules.forms.length, i)
 
   .intro
     h1#gradients Gradients
     :markdown
       While [nib's gradient helper](http://visionmedia.github.io/nib/) takes care of most situations and is automatically included, axis provides a couple of convenience methods for easily creating gradients.
 
-  each form, i in site.modules.gradients
-    +doc(form, site.modules.gradients.length, i)
+  each mxin, i in site.modules.gradients
+    +doc(mxin, site.modules.gradients.length, i)
+
+  .intro
+    h1#interaction Interaction
+    p Stylus is unique among css preprocessors for it's ability to access values from parent elements. This makes interaction-based mixins like these not only possible, but much more clean and DRY.
+
+  each mxin, i in site.modules.interaction
+    +doc(mxin, site.modules.interaction.length, i)
 
 //- This mixin renders the documentation block for each object
 mixin doc(fn, i, length)

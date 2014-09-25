@@ -1,0 +1,13 @@
+---
+name: 'hover-lighten'
+description: "Lightens the color and/or background color on your element when it's hovered."
+params:
+  percentage: 'How much you want to lighten the color. Default is 15%'
+  forceUseColor: 'If true, chooses color over background color first. Default false.'
+examples:
+  - code: ".selector\n  background: fuchsia\n  hover-lighten()"
+    el: "<div class='hover-lighten'></div>"
+  - code: ".selector\n  background: yellow\n  hover-lighten: 50%"
+    el: "<div class='hover-lighten2'></div>"
+_content: false
+---

@@ -45,6 +45,13 @@ block content
   each mxin, i in site.modules.interaction
     +doc(mxin, site.modules.interaction.length, i)
 
+  .intro
+    h1#tables Tables
+    p Right now, the "tables" section consists of just one mixin, for prettifying tables. But who knows, it might expand in the future if people love tables enough!
+
+  each mxin, i in site.modules.tables
+    +doc(mxin, site.modules.tables.length, i)
+
 //- This mixin renders the documentation block for each object
 mixin doc(fn, i, length)
   section

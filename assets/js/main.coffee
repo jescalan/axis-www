@@ -3,7 +3,7 @@ $ ->
   $('nav').waypoint('sticky')
 
   # scroll spy nav
-  $('main .intro h1, main h3').waypoint ->
+  $('main .intro h1, main .instruction h1, main h3').waypoint ->
     id = $(@).attr('id')
     
     # expand and contract lists

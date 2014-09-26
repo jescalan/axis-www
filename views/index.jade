@@ -66,12 +66,19 @@ block content
   each mxin, i in site.modules.ui
     +doc(mxin, site.modules.ui.length, i)
 
+  .intro
+    h1#utilities Utilities
+    p A grab bag of various useful mixins that don't fit into any other category.
+
+  each mxin, i in site.modules.utilities
+    +doc(mxin, site.modules.utilities.length, i)
+
 //- This mixin renders the documentation block for each object
 mixin doc(fn, i, length)
   section
 
     h3(id=fn.name)= fn.name + "(" + (fn.params ? Object.keys(fn.params) : '') + ")"
-    p= fn.description
+    p!= fn.description
 
     if fn.params
       h4 Parameters
@@ -80,12 +87,13 @@ mixin doc(fn, i, length)
           dt= k
           dd= v
 
-    h4 Examples
+    if fn.examples
+      h4 Examples
 
-    each example in fn.examples
-      .example
-        pre= example.code
-        .el!= example.el
+      each example in fn.examples
+        .example
+          pre= example.code
+          .el!= example.el
 
   if i != length + 1
     hr

@@ -1,0 +1,13 @@
+---
+name: 'bg-retina'
+description: "Make sure the image is double the size, pass it halved numbers, and you're in the retina-clear. Alternately, use svgs and don't use this mixin."
+params:
+  path: 'Path to the image. If you set img-path, no need to include that twice.'
+  width: "Width of the image. In this case it should be half the actual image's width"
+  height: "Height of the image. In this case it should be half the actual image's height"
+  args: "Any other arguments you might want to pass to 'background'"
+examples:
+  - code: ".selector\n  bg-retina: 'path/to/image.jpg' 200px 250px"
+    el: "<div class='bg-retina'></div>"
+_content: false
+---

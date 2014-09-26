@@ -1,0 +1,13 @@
+---
+name: 'sprite'
+description: "Given a direction in which your sprites are aligned (horizontal/vertical) and an iteration, will measure the width/height of your first sprite frame and step through to the nth next one, depending on the given iteration number. Width/height must be defined for this to work (as is the case for any sprite)"
+params:
+  iteration: 'Integer, the frame number on the sprite. Will be 1/X of the total image width.'
+  orientation: 'Whether your sprite frames are aligned horizontally or vertically. Default is vertical.'
+examples:
+  - code: ".sprite\n  sprite: 1"
+    el: "<div class='sprite'></div>"
+  - code: ".sprite\n  sprite: 2 horizontal"
+    el: "<div class='sprite2'></div>"
+_content: false
+---

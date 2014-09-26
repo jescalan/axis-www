@@ -1,0 +1,14 @@
+---
+name: 'notice'
+description: "A more generic and customizable version of a flash alert. Outputs a colored box with a light gradient, fully customizable."
+params:
+  width: 'Hard width of the box, if you need it. No default.'
+  color: 'The base color of the box. Default is #eee'
+  padding: 'Padding between the box and content. Default is 10px.'
+examples:
+  - code: ".notice\n  notice()"
+    el: "<div class='notice'>Hey, something happened!</div>"
+  - code: ".notice\n  notice: 200px #D4EEF8"
+    el: "<div class='notice2'>Look at my fancy colors!</div>"
+_content: false
+---

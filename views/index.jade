@@ -59,6 +59,13 @@ block content
   each mxin, i in site.modules.typography
     +doc(mxin, site.modules.typography.length, i)
 
+  .intro
+    h1#ui UI
+    p A set of flexible shortcuts for creating common UI elements.
+
+  each mxin, i in site.modules.ui
+    +doc(mxin, site.modules.ui.length, i)
+
 //- This mixin renders the documentation block for each object
 mixin doc(fn, i, length)
   section

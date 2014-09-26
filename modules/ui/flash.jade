@@ -1,0 +1,16 @@
+---
+name: 'flash'
+description: "A notification for 'flash' alerts, generally letting the user know about something like a success or failure."
+params:
+  type: 'Can be notice, success, warning, or error. Default is notice.'
+examples:
+  - code: ".flash\n  flash()"
+    el: "<div class='flash'>Hey, something happened</div>"
+  - code: ".flash\n  flash: warning"
+    el: "<div class='flash2'>Your computer will explode in 5 minutes</div>"
+  - code: ".flash\n  flash: error"
+    el: "<div class='flash3'>Your computer has exploded. How are you reading this?</div>"
+  - code: ".flash\n  flash: success"
+    el: "<div class='flash4'>You have saved your computer from certain doom!</div>"
+_content: false
+---

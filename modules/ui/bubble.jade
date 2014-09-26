@@ -1,0 +1,20 @@
+---
+name: 'bubble'
+description: "Creates a bubble with a little pointer with pure css. A lot of customizable options on this one."
+params:
+  pos0: 'Put the triangle on the left or right side of the bubble. Default is left.'
+  pos1: 'Put the triangle on the top or bottom of the bubble. Default is bottom.'
+  color: 'Color of the bubble. Default is #EEEEEE.'
+  width: 'Width of the bubble, if you need to set a hard width.'
+  triangleSize: 'Size of the triangle pointer. Default is 10px'
+  padding: 'Padding around the contents of the bubble. Default is 10px.'
+  triangleColor: 'Color of the triangle pointer. Default is 3% darker than the color, to account for the gradient.'
+examples:
+  - code: ".bubble\n  bubble()"
+    el: "<div class='bubble'>So bubbly, wow</div>"
+  - code: ".bubble\n  bubble: top center #57777E"
+    el: "<div class='bubble2'>So bubbly, wow</div>"
+  - code: ".bubble\n  bubble(pos0: bottom, pos1: right, triangleSize: 15px, triangleColor: red)"
+    el: "<div class='bubble3'>So bubbly, wow</div>"
+_content: false
+---

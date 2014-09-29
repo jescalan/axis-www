@@ -90,18 +90,41 @@ main
   
   section
     margin: 25px 5%
-    max-width: 650px
+    max-width: 675px
     
     > p a
       link: red
   
   .instruction
     padding: 0 5%
-    max-width: 650px
+    max-width: 675px
+    
+    p
+      margin: .5em 0 0 0
+      
+      > code
+        code()
+        font-size: .75em
+    
+    a
+      link: red
+      transition()
+
+    h4
+      margin: 1em 0
+
+    pre code
+      pre()
+      font-size: .75em
+      padding: 20px
+      
+      *
+        font-family: fira-mono, monospace
   
   .intro
     background: light-grey
     padding: 25px 5%
+    margin-top: 25px
     
     p
       margin: .5em 0 0 0
@@ -144,7 +167,7 @@ main
     border-bottom: 1px solid darken(light-grey, 5%)
   
   p
-    color: #8b8b8b
+    color: #7c7c7c
     font-size: 17px
     line-height: 1.5em
   

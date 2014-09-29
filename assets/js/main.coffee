@@ -1,4 +1,7 @@
 $ ->
+  # code highlighting
+  hljs.initHighlightingOnLoad()
+
   # sticky nav
   $('nav').waypoint('sticky')
 

@@ -9,6 +9,7 @@ html
     script(src="//use.typekit.net/ddj0mjr.js")
     script.
       try{Typekit.load();}catch(e){}
+    link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css')
     != css()
   body
 
@@ -24,6 +25,7 @@ html
         ul
           li(data-id='installation'): a(href='#installation') Installation
           li(data-id='usage'): a(href='#usage') Usage
+          li(data-id='easing'): a(href='#easing') Easing
           each module in modules.sort()
             li(data-id=module)
               a(href='#'+module)= module.humanize()

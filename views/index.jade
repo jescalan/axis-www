@@ -3,11 +3,199 @@ extends layout
 block content
   .instruction
     h1#installation Installation
-    p Here are some instructions on how to install axis. Wow.
+    :markdown
+      You can and should install axis through [npm](http://npmjs.org), which comes bundled with [node.js](http://nodejs.org). You can install axis into a node project with the following command:
+
+      ```
+      npm install axis --save
+      ```
 
   .instruction
     h1#usage Usage
-    p This is how to use axis
+    :markdown
+      Axis comes as a very standard stylus plugin, but unfortunately there are a huge variety of ways that you can use stylus plugins and it would be impossible to cover them all here. But I will try to cover as many of the common use cases as possible.
+
+      Before we start with the different build system integrations though, I want to note the single option that you can initialize axis with. By default, axis will auto-import itself into all your stylesheets. This is purely for convenience -- axis only defines mixins, so it's invisible if you don't use any of it's mixins anyway. However, if you'd rather not have it do this, you can initialize axis with `{ implicit: false }`, then you'll need to manually `@import` it in your stylus in order to use it. Ok, on to integrations.
+
+    h4 Standalone
+
+    :markdown
+      Using axis with a straight up stylus pipeline is fairly simple with the [use function](http://learnboost.github.io/stylus/docs/js.html#usefn). The code below demonstrates a simple use case.
+
+      ```js
+      var stylus = require('stylus'),
+          axis = require('axis'),
+          fs = require('fs');
+
+      var code = fs.readFileSync('/path/to/file.styl', 'utf8');
+
+      stylus(code)
+        .use(axis())
+        .render(console.log.bind(console));
+      ```
+
+    h4 Accord &amp; Roots
+
+    :markdown
+      [Accord](https://github.com/jenius/accord) is a clean and uniform interface to a large number of compiled languages. It's used behind the scenes of a number of libraries, including the wonderful static site build tool [roots](http://roots.cx). It's stylus adapter is [fully documented](https://github.com/jenius/accord/blob/master/docs/stylus.md), and includes ['use'](https://github.com/jenius/accord/blob/master/docs/stylus.md#use) similar to the direct stylus API. Here's an example of how it would look loading in axis.
+
+      ```js
+      var accord = require('accord'),
+          axis = require('axis'),
+          fs = require('fs');
+
+      var styl = accord.load('stylus');
+      var code = fs.readFileSync('/path/to/file.styl', 'utf8');
+
+      styl.render(code, { use: axis() })
+        .then(console.log.bind(console))
+      ```
+
+      If you are using Roots, you can just load axis in as a stylus plugin in the `app.coffee` file as such:
+
+      ```coffee
+      axis = require 'axis'
+
+      module.exports =
+        stylus: { use: axis() }
+      ```
+
+    h4 Gulp
+
+    :markdown
+      You can use accord directly with gulp if you'd like through the [gulp-accord](https://github.com/carrot/gulp-accord) plugin, which can compile any of the languages accord supports, or use the [gulp-stylus](https://github.com/stevelacy/gulp-stylus) plugin, which also uses accord under the hood. Here's how it would look with gulp-stylus:
+
+      ```js
+      var gulp = require('gulp'),
+          stylus = require('gulp-stylus'),
+          axis = require('axis');
+
+      gulp.task('default', function(){
+        gulp.src('./path/to/file.styl')
+        .pipe(stylus({ use: axis() }))
+        .pipe(gulp.dest('./destination/folder'));
+      });
+      ```
+
+    h4 Grunt
+
+    :markdown
+      Although grunt's stylus plugin doesn't use accord, it takes very similar options, and will look almost the same, although a lot more verbose than gulp, but that's just how grunt is. Here's how a snippet of the config would look in use:
+
+      ```js
+      var axis = require('axis');
+
+      stylus: {
+        compile: {
+          options: { use: axis() },
+          files: { '/path/to/result.css': '/path/to/file.styl' }
+        }
+      }
+      ```
+
+    h4 Express
+
+    :markdown
+      Stylus actually has [very nice documentation on its own site](http://learnboost.github.io/stylus/docs/middleware.html) on how to use it with express, so follow this to get stylus set up. Beyond that, just `use` axis in the pipeline as is described in the standalone section above. Example of this in action:
+
+      ```js
+      var express = require('express'),
+          axis = require('axis');
+
+      var app = express()
+
+      app.middleware({
+        src: __dirname,
+        dest: __dirname  '/public',
+        compile: compile
+      });
+
+      function compile(str, path){
+        return stylus(str)
+          .set('filename', path)
+          .use(axis());
+      }
+      ```
+
+      If there's another build pipeline that you are struggling to get axis integrated with, [open up an issue](https://github.com/jenius/axis-www), and we can try to add instructions here!
+
+  .intro
+    h1#easing Easing
+    p While the dieties of css have been kind enough to provide us with a couple of basic easing functions for transitions, some of us like to go all out on crazy easing effects. If you fit this description, do not fret, axis has got you covered in that department.
+
+  .ease-container
+    .ease-in-quad
+      h6 ease-in-quad
+      span
+    .ease-in-cubic
+      h6 ease-in-cubic
+      span
+    .ease-in-quart
+      h6 ease-in-quart
+      span
+    .ease-in-quint
+      h6 ease-in-quint
+      span
+    .ease-in-sine
+      h6 ease-in-sine
+      span
+    .ease-in-expo
+      h6 ease-in-expo
+      span
+    .ease-in-circ
+      h6 ease-in-circ
+      span
+    .ease-in-back
+      h6 ease-in-back
+      span
+    .ease-out-quad
+      h6 ease-out-quad
+      span
+    .ease-out-cubic
+      h6 ease-out-cubic
+      span
+    .ease-out-quart
+      h6 ease-out-quart
+      span
+    .ease-out-quint
+      h6 ease-out-quint
+      span
+    .ease-out-sine
+      h6 ease-out-sine
+      span
+    .ease-out-expo
+      h6 ease-out-expo
+      span
+    .ease-out-circ
+      h6 ease-out-circ
+      span
+    .ease-out-back
+      h6 ease-out-back
+      span
+    .ease-in-out-quad
+      h6 ease-in-out-quad
+      span
+    .ease-in-out-cubic
+      h6 ease-in-out-cubic
+      span
+    .ease-in-out-quart
+      h6 ease-in-out-quart
+      span
+    .ease-in-out-quint
+      h6 ease-in-out-quint
+      span
+    .ease-in-out-sine
+      h6 ease-in-out-sine
+      span
+    .ease-in-out-expo
+      h6 ease-in-out-expo
+      span
+    .ease-in-out-circ
+      h6 ease-in-out-circ
+      span
+    .ease-in-out-back
+      h6 ease-in-out-back
+      span
 
   .intro
     h1#buttons Buttons

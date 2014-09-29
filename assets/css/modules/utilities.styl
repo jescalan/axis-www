@@ -20,6 +20,16 @@
 .ir
   ir('hello-there.svg', 301px 32px)
 
+.media
+  media: 10px
+  
+  p
+    margin: 0
+    font-size: .9em
+  
+  img
+    max-width: 55px
+
 .no-select
   no-select()
 
@@ -37,6 +47,9 @@
 .triangle
   triangle()
 
+.triangle2
+  triangle: right 13px lime
+
 .vertically-align
   size: 250px 150px
   b()
@@ -44,3 +57,15 @@
   p
     margin: 0
     vertically-align()
+
+.sprite
+  background: url('/img/sprite.jpg')
+  width: 28px
+  height: 31px
+  sprite: 0 'horizontal'
+
+.sprite2
+  background: url('/img/sprite.jpg')
+  width: 28px
+  height: 31px
+  sprite: 1 'horizontal'

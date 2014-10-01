@@ -1,6 +1,10 @@
 {
   "name": "axis-www",
   "description": "Documentation for axis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jenius/axis-www"
+  },
   "dependencies": {
     "autoprefixer-stylus": "0.3.x",
     "axis": "0.3.x",

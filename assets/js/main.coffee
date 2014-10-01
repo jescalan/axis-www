@@ -37,3 +37,7 @@ $ ->
   # on doc headline click, hash the url
   $('main h1, main h3').on 'click', ->
     history.pushState(null, null, "##{$(@).attr('id')}")
+
+  # on nav logo click, scroll back to top
+  $('.logo-small').on 'click', ->
+    $('html, body').animate({ scrollTop: 0 }, 500)

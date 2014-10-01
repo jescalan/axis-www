@@ -3,7 +3,7 @@
   "description": "Documentation for axis",
   "dependencies": {
     "autoprefixer-stylus": "0.3.x",
-    "axis": "0.2.x",
+    "axis": "0.3.x",
     "coffee-script": "1.8.x",
     "css-pipeline": "0.1.x",
     "dynamic-content": "0.0.3",

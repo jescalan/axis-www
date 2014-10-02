@@ -23,7 +23,7 @@ header
   h1
     ir('title.svg', 144px 43px)
     margin: 0 auto 15px auto
-  
+
   h2
     normal()
     font-weight: 400
@@ -34,7 +34,7 @@ header
   width: 22%
   height: 100%
   float: left
-  
+
   +below(800px)
     display: none
 
@@ -42,7 +42,7 @@ nav
   background: grey
   height: 100%
   overflow-y: scroll
-  
+
   .logo-small
     background: red
     width: 100%
@@ -61,7 +61,7 @@ nav
     position: fixed
     top: 0
     width: 22%
-    
+
     .logo-small
       height: 60px
       padding: 16px 0
@@ -74,18 +74,18 @@ nav
       font-size: 1.3em
       font-weight: 500
       margin-bottom: 10px
-      
+
       a
         reset-link()
         transition()
         color: #555
-        
+
         &:hover
           opacity: .7
 
         &.active
           color: red
-      
+
       ul
         reset-list()
         display: none
@@ -101,36 +101,36 @@ main
   padding: 20px 0
   width: 78%
   float: right
-  
+
   +below(800px)
     width: 100%
     float: none
-  
+
   section
     margin: 25px 5%
     max-width: 675px
-    
+
     > p a
       link: red
-  
+
   .instruction
     padding: 0 5%
     max-width: 675px
-    
+
     p
       margin: .5em 0 0 0
-      
+
       > code
         code()
         font-size: .75em
-    
+
     a
       link: red
       transition()
 
     h1
       margin: .5em 0
-      
+
     &:first-child h1
       margin-top: 0
 
@@ -141,19 +141,19 @@ main
       pre()
       font-size: .75em
       padding: 20px
-      
+
       *
         font-family: fira-mono, monospace
-  
+
   .intro
     background: light-grey
     padding: 25px 5%
     margin-top: 25px
-    
+
     p
       margin: .5em 0 0 0
       max-width: 650px
-    
+
     a
       link: red
       transition()
@@ -164,14 +164,14 @@ main
     -webkit-font-smoothing: subpixel-antialiased
     margin: 0
     cursor: pointer
-  
+
   h3
     font-family: fira-mono, monospace
     color: red
     margin-top: 0
     cursor: pointer
     position: relative
-    
+
     &:before
       content: ""
       size: 12px
@@ -179,38 +179,38 @@ main
       absolute: top 8px left -7px
       opacity: 0
       transition()
-      
+
     &:hover
       &:before
         left: -20px
         opacity: 1
-  
+
   h4
     color: #6D6D6D
     margin: .3em 0
     border-bottom: 1px solid darken(light-grey, 5%)
-  
+
   p
     color: #7c7c7c
     font-size: 17px
     line-height: 1.5em
-  
+
   hr
     border: 1px solid light-grey
     margin: 30px auto
     // ir('divider.svg', 423px 27px)
-  
+
   dt
     font-family: fira-mono, monospace
-    
+
     &:after
       content: ":"
-  
+
   dd
     color: #8b8b8b
     font-size: 17px
-    line-height: 1.5em  
-  
+    line-height: 1.5em
+
   .example
     group()
 

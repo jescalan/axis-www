@@ -1,0 +1,12 @@
+---
+name: 'radio'
+description: "A simple reset for radio button styling across browsers. Takes a color. Default color is blue. Use on the label which wraps your radio inputs."
+params:
+  color: 'Color for the active state. Default is blue.'
+examples:
+  - code: "label\n  radio()"
+    el: "<fieldset class='radio-buttons'><label for='terse' class='radio'><input id='terse' type='radio' value='terse' name='quality'/><span>terse</span></label><label for='modular' class='radio'><input id='modular' type='radio' value='modular' name='quality'/><span>modular</span></label><label for='powerful' class='radio'><input id='powerful' type='radio' value='powerful' name='quality'/><span>powerful</span></label></fieldset>"
+  - code: "label\n  radio(red)"
+    el: "<fieldset class='radio-buttons red'><label for='brooklyn' class='radio2'><input id='brooklyn' type='radio' value='brooklyn' name='city'/><span>Brooklyn</span></label><label for='nashville' class='radio2'><input id='nashville' type='radio' value='nashville' name='city'/><span>Nashville</span></label></fieldset>"    
+_content: false
+---

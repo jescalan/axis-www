@@ -95,3 +95,27 @@
   div
     width: rem(150px)
     border: 1px solid blue
+
+.quantity-query
+  ul
+    inline-list()
+
+.at-least
+  ul
+    +quantity-at-least(3)
+      border: 1px solid red
+
+.at-most
+  ul
+    +quantity-at-most(7)
+      border: 1px solid blue
+
+.between
+  div
+    +quantity-between(1, 10, span)
+      border: 1px solid green
+      margin-right: 5px
+.exactly
+  ul
+    +quantity-exactly(4)
+      border: 1px solid orange

@@ -1,0 +1,12 @@
+---
+name: 'quantity-between'
+description: "<a href='https://github.com/pascalduez/postcss-quantity-queries'>Quantity query</a> to set rules for a selector based on a range of <a href='http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/'>siblings</a>. To use, set it as a <a href='https://learnboost.github.io/stylus/docs/mixins.html#block-mixins'>block mixin</a> on the parent element. <a href='http://codepen.io/dbox/pen/waeQOL'>Demo here.</a>"
+params:
+  start: 'starting number of siblings'
+  end: 'ending number of siblings'  
+  selector: 'Css selector to be used. Default is <li>.'
+examples:
+  - code: "ul\n  +quantity-between(1, 10, span)\n     border: 1px solid green"
+    el: "<div class='quantity-query between'><div><span>span 1</span><span>span 2</span><span>span 3</span><span>span 4</span></span><p>Since there are between 1 and 10 spans, they are colored green.</p></div>" 
+_content: false
+---

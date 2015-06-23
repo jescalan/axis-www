@@ -3,7 +3,7 @@ extends layout
 block content
   .instruction
     h1#installation Installation
-    :markdown
+    :marked
       You can and should install axis through [npm](http://npmjs.org), which comes bundled with [node.js](http://nodejs.org). You can install axis into a node project with the following command:
 
       ```
@@ -14,14 +14,14 @@ block content
 
   .instruction
     h1#usage Usage
-    :markdown
+    :marked
       Axis comes as a very standard stylus plugin, but unfortunately there are a huge variety of ways that you can use stylus plugins and it would be impossible to cover them all here. But I will try to cover as many of the common use cases as possible.
 
       Before we start with the different build system integrations though, I want to note the single option that you can initialize axis with. By default, axis will auto-import itself into all your stylesheets. This is purely for convenience -- axis only defines mixins, so it's invisible if you don't use any of it's mixins anyway. However, if you'd rather not have it do this, you can initialize axis with `{ implicit: false }`, then you'll need to manually `@import` it in your stylus in order to use it. Ok, on to integrations.
 
     h4 Standalone
 
-    :markdown
+    :marked
       Using axis with a straight up stylus pipeline is fairly simple with the [use function](http://learnboost.github.io/stylus/docs/js.html#usefn). The code below demonstrates a simple use case.
 
       ```js
@@ -38,7 +38,7 @@ block content
 
     h4 Accord &amp; Roots
 
-    :markdown
+    :marked
       [Accord](https://github.com/jenius/accord) is a clean and uniform interface to a large number of compiled languages. It's used behind the scenes of a number of libraries, including the wonderful static site build tool [roots](http://roots.cx). It's stylus adapter is [fully documented](https://github.com/jenius/accord/blob/master/docs/stylus.md), and includes ['use'](https://github.com/jenius/accord/blob/master/docs/stylus.md#use) similar to the direct stylus API. Here's an example of how it would look loading in axis.
 
       ```js
@@ -64,7 +64,7 @@ block content
 
     h4 Gulp
 
-    :markdown
+    :marked
       You can use accord directly with gulp if you'd like through the [gulp-accord](https://github.com/carrot/gulp-accord) plugin, which can compile any of the languages accord supports, or use the [gulp-stylus](https://github.com/stevelacy/gulp-stylus) plugin, which also uses accord under the hood. Here's how it would look with gulp-stylus:
 
       ```js
@@ -81,7 +81,7 @@ block content
 
     h4 Grunt
 
-    :markdown
+    :marked
       Although grunt's stylus plugin doesn't use accord, it takes very similar options, and will look almost the same, although a lot more verbose than gulp, but that's just how grunt is. Here's how a snippet of the config would look in use:
 
       ```js
@@ -97,7 +97,7 @@ block content
 
     h4 Express
 
-    :markdown
+    :marked
       Stylus actually has [very nice documentation on its own site](http://learnboost.github.io/stylus/docs/middleware.html) on how to use it with express, so follow this to get stylus set up. Beyond that, just `use` axis in the pipeline as is described in the standalone section above. Example of this in action:
 
       ```js
@@ -231,7 +231,7 @@ block content
 
   .intro
     h1#gradients Gradients
-    :markdown
+    :marked
       While [nib's gradient helper](http://nibstyl.us/docs/) takes care of most situations and is automatically included, axis provides a couple of convenience methods for easily creating gradients.
 
   each mxin, i in site.modules.gradients

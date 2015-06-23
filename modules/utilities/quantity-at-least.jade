@@ -1,0 +1,11 @@
+---
+name: 'quantity-at-least'
+description: "<a href='https://github.com/pascalduez/postcss-quantity-queries'>Quantity query</a> to set rules for a selector based on a minimum number of <a href='http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/'>siblings</a>. To use, set it as a <a href='https://learnboost.github.io/stylus/docs/mixins.html#block-mixins'>block mixin</a> on the parent element. <a href='http://codepen.io/dbox/pen/waeQOL'>Demo here.</a>"
+params:
+  count: 'Minimum number of siblings'
+  selector: 'Css selector to be used. Default is <li>.'
+examples:
+  - code: "ul\n  +quantity-at-least(3, li)\n     border: 1px solid red"
+    el: "<div class='quantity-query at-least'><ul><li>one</li><li>two</li><li>three</li><li>four</li></ul><p>Since there are at least 3 list items, they are colored red.</p></div>" 
+_content: false
+---

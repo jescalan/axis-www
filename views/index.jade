@@ -230,6 +230,14 @@ block content
     +doc(mxin, site.modules.forms.length, i)
 
   .intro
+    h1#images Images
+    :marked
+      Some helpful tools to make dealing with images much more pleasant.
+      
+  each mxin, i in site.modules.images
+    +doc(mxin, site.modules.images.length, i)
+
+  .intro
     h1#gradients Gradients
     :marked
       While [nib's gradient helper](http://nibstyl.us/docs/) takes care of most situations and is automatically included, axis provides a couple of convenience methods for easily creating gradients.
@@ -243,6 +251,20 @@ block content
 
   each mxin, i in site.modules.interaction
     +doc(mxin, site.modules.interaction.length, i)
+    
+  .intro
+    h1#layout Layout
+    p A few mixins to help tame those layouts.
+    
+  each mxin, i in site.modules.layout
+    +doc(mxin, site.modules.layout.length, i)    
+
+  .intro
+    h1#reset Reset
+    p Reset all the things.
+    
+  each mxin, i in site.modules.reset
+    +doc(mxin, site.modules.reset.length, i)    
 
   .intro
     h1#tables Tables

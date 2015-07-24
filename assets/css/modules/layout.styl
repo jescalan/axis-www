@@ -1,0 +1,35 @@
+.cols
+  columns: 3 10px 30px
+
+.widescreen-video
+  ratio-box(16/9)
+
+  iframe, object, embed, video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.media
+  media: 10px
+
+  p
+    margin: 0
+    font-size: .9em
+
+  img
+    max-width: 55px
+
+.vertically-align
+  size: 250px 150px
+  b()
+
+  p
+    margin: 0
+    padding: 0 5px;
+    vertically-align()
+
+  &.false
+    p
+      vertically-align(false)

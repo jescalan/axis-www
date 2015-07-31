@@ -33,3 +33,21 @@
   &.false
     p
       vertically-align(false)
+
+.tl
+  margin-bottom: -rem(20px)
+  ul
+    tl()
+    border: 1px solid #eee
+
+    &.no-border
+      border: none
+
+  li
+    // border: 1px solid #eee
+    font-size: -rem(14px)
+    padding: 2%
+    border-right: 1px solid #eee
+
+    &:last-child
+      border: 0

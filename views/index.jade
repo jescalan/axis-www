@@ -9,7 +9,7 @@ block content
       ```
       npm install axis --save
       ```
-
+      
       You can find the full source for axis [on github, here](https://github.com/jenius/axis).
 
   .instruction
@@ -127,85 +127,85 @@ block content
 
   .ease-container
     .ease-in-quad
-      h6 ease-in-quad
+      h6 $ease-in-quad
       span
     .ease-in-cubic
-      h6 ease-in-cubic
+      h6 $ease-in-cubic
       span
     .ease-in-quart
-      h6 ease-in-quart
+      h6 $ease-in-quart
       span
     .ease-in-quint
-      h6 ease-in-quint
+      h6 $ease-in-quint
       span
     .ease-in-sine
-      h6 ease-in-sine
+      h6 $ease-in-sine
       span
     .ease-in-expo
-      h6 ease-in-expo
+      h6 $ease-in-expo
       span
     .ease-in-circ
-      h6 ease-in-circ
+      h6 $ease-in-circ
       span
     .ease-in-back
-      h6 ease-in-back
+      h6 $ease-in-back
       span
     .ease-in-swift
-      h6 ease-in-swift
+      h6 $ease-in-swift
       span
     .ease-out-quad
-      h6 ease-out-quad
+      h6 $ease-out-quad
       span
     .ease-out-cubic
-      h6 ease-out-cubic
+      h6 $ease-out-cubic
       span
     .ease-out-quart
-      h6 ease-out-quart
+      h6 $ease-out-quart
       span
     .ease-out-quint
-      h6 ease-out-quint
+      h6 $ease-out-quint
       span
     .ease-out-sine
-      h6 ease-out-sine
+      h6 $ease-out-sine
       span
     .ease-out-expo
-      h6 ease-out-expo
+      h6 $ease-out-expo
       span
     .ease-out-circ
-      h6 ease-out-circ
+      h6 $ease-out-circ
       span
     .ease-out-back
-      h6 ease-out-back
+      h6 $ease-out-back
       span
     .ease-out-swift
-      h6 ease-out-swift
+      h6 $ease-out-swift
       span
     .ease-in-out-quad
-      h6 ease-in-out-quad
+      h6 $ease-in-out-quad
       span
     .ease-in-out-cubic
-      h6 ease-in-out-cubic
+      h6 $ease-in-out-cubic
       span
     .ease-in-out-quart
-      h6 ease-in-out-quart
+      h6 $ease-in-out-quart
       span
     .ease-in-out-quint
-      h6 ease-in-out-quint
+      h6 $ease-in-out-quint
       span
     .ease-in-out-sine
-      h6 ease-in-out-sine
+      h6 $ease-in-out-sine
       span
     .ease-in-out-expo
-      h6 ease-in-out-expo
+      h6 $ease-in-out-expo
       span
     .ease-in-out-circ
-      h6 ease-in-out-circ
+      h6 $ease-in-out-circ
       span
     .ease-in-out-back
-      h6 ease-in-out-back
+      h6 $ease-in-out-back
       span
     .ease-in-out-swift
-      h6 ease-in-out-swift
+      h6 $ease-in-out-swift
       span
 
   .intro
@@ -230,6 +230,14 @@ block content
     +doc(mxin, site.modules.forms.length, i)
 
   .intro
+    h1#gradients Gradients
+    :marked
+      While the official [W3C specs on gradients](http://www.w3schools.com/css/css3_gradients.asp) take care of most situations, Axis provides a couple of convenience methods for easily creating gradients.
+
+  each mxin, i in site.modules.gradients
+    +doc(mxin, site.modules.gradients.length, i)
+
+  .intro
     h1#images Images
     :marked
       Some helpful tools to make dealing with images much more pleasant.
@@ -237,13 +245,6 @@ block content
   each mxin, i in site.modules.images
     +doc(mxin, site.modules.images.length, i)
 
-  .intro
-    h1#gradients Gradients
-    :marked
-      While [nib's gradient helper](http://nibstyl.us/docs/) takes care of most situations and is automatically included, axis provides a couple of convenience methods for easily creating gradients.
-
-  each mxin, i in site.modules.gradients
-    +doc(mxin, site.modules.gradients.length, i)
 
   .intro
     h1#interaction Interaction

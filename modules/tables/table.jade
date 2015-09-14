@@ -2,13 +2,13 @@
 name: 'table'
 description: 'Ported directly from Twitter Bootstrap, as they did an excellent job with tables. Take three fairly self-explanitory arguments, all boolean. 1st makes the table bordered, 2nd adds zebra striping, and the 3rd indiated whether the table is condensed or not.'
 params:
-  border: 'Boolean - adds borders to the table. Default true.'
-  striped: 'Boolean - adds zebra striping to the table rows. Default true.'
-  condensed: 'Boolean - created a condensed table with much less extra space. Default false.'
+  $border: 'Boolean - adds borders to the table. Default true.'
+  $striped: 'Boolean - adds zebra striping to the table rows. Default true.'
+  $condensed: 'Boolean - created a condensed table with much less extra space. Default false.'
 examples:
   - code: "table\n  table()"
     el: "<table class='table'><tr><td>Name</td><td>Doge?</td></tr><tr><td>John Doe</td><td>Yup.</td></tr><tr><td>Foo Bar</td><td>No Way</td></tr></table>"
-  - code: ".stable\n  table(striped: false, condensed: true)"
+  - code: ".stable\n  table($striped: false, $condensed: true)"
     el: "<table class='table2'><tr><td>Name</td><td>Doge?</td></tr><tr><td>John Doe</td><td>Yup.</td></tr><tr><td>Foo Bar</td><td>No Way</td></tr></table>"
 _content: false
 ---

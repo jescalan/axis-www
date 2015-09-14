@@ -2,9 +2,9 @@
 name: "gradient"
 description: "Takes one color and outputs a vertical gradient between the offset by 10% in either direction, offset precentage customizable via 'strength' param. Or takes two colors and outputs a vertical gradient that fades between the two colors."
 params:
-  color1: "Transitions starting at this color. If only this color is passed, lightens and darkend by 'strength' and creates a gradient with this color as the average. If you pass a second color, this is the top color and it transitions to the second."
-  color2: 'Optional, transitions from color1 to this one'
-  strength: "Percentage value, if you pass one color determines how much lighter and darker the top and bottom of the gradient should be. Default is 10%. If you pass a percentage as the second value, it's interpreted as strength, not color2."
+  $color1: "Transitions starting at this color. If only this color is passed, lightens and darkend by 'strength' and creates a gradient with this color as the average. If you pass a second color, this is the top color and it transitions to the second."
+  $color2: 'Optional, transitions from color1 to this one'
+  $strength: "Percentage value, if you pass one color determines how much lighter and darker the top and bottom of the gradient should be. Default is 10%. If you pass a percentage as the second value, it's interpreted as strength, not color2."
 examples:
   - code: ".gradient\n  gradient: red"
     el: "<div class='gradient'></div>"

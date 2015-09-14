@@ -2,9 +2,9 @@
 name: 'breadcrumb'
 description: "If you put this mixin on a list, it will turn it into an inline list separated by a character, slash by default. Good for breadcrumb trails or divided lists."
 params:
-  character: "The character that divides the list items. Default is '/'."
-  spacing: "How much space between each item. Default is 10px."
-  dividerColor: "Color of the list item divider. Default is #CDCDCD"
+  $character: "The character that divides the list items. Default is '/'."
+  $spacing: "How much space between each item. Default is 10px."
+  $divider-color: "Color of the list item divider. Default is #CDCDCD"
 examples:
   - code: "p\n  breadcrumb()"
     el: "<ul class='breadcrumb'><li>One</li><li>Two</li><li>Three</li></ul>"

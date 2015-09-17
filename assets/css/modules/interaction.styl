@@ -123,7 +123,7 @@
 .click-down
   button(blue)
   click-down()
-  no-select()  
+  no-select()
 
 .click-shadow
   button(#008080)
@@ -136,3 +136,13 @@
   click-inset()
   transition()
   no-select()
+
+.click-shrink
+  button(tomato)
+  color: $white
+  click-shrink()
+  transition(all .1s ease)
+  no-select()
+
+  &:hover
+    color: white

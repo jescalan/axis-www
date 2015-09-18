@@ -82,6 +82,34 @@
   color: white
   hover-pop: 1.5 7deg true
 
+.hover-glow
+  size: 250px 75px
+  padding: 27px
+  text-align: center
+  transition()
+  background: #fff
+  border: 1px solid lighten(blue, 40%)
+  color: white
+  hover-glow()
+
+.hover-glow2
+  size: 250px 75px
+  padding: 27px
+  text-align: center
+  transition()
+  background: #333
+  color: white
+  hover-glow(purple, 100px)
+
+.hover-float
+  size: 250px 75px
+  padding: 27px
+  text-align: center
+  transition()
+  background: blue
+  color: white
+  hover-float()
+
 .hover-underline
   hover-underline()
   transition()
@@ -91,3 +119,30 @@
   hover-underline: 2px dotted lime
   transition()
   display: inline-block
+
+.click-down
+  button(blue)
+  click-down()
+  no-select()
+
+.click-shadow
+  button(#008080)
+  click-shadow()
+  transition()
+  no-select()
+
+.click-inset
+  button(darken(violet, 40%))
+  click-inset()
+  transition()
+  no-select()
+
+.click-shrink
+  button(tomato)
+  color: $white
+  click-shrink()
+  transition(all .1s ease)
+  no-select()
+
+  &:hover
+    color: white

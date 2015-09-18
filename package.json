@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "autoprefixer-stylus": "0.7.x",
-    "axis": "0.4.x",
+    "axis": "^0.5.0",
     "coffee-script": "1.9.x",
     "css-pipeline": "0.2.x",
     "dynamic-content": "0.2.x",
@@ -15,7 +15,7 @@
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "0.0.1",
     "marked": "0.3.x",
-    "roots": "3.1.x",    
+    "roots": "3.1.x",
     "rupture": "0.6.x",
     "string": "2.x",
     "stylus": "0.51.x"

@@ -2,8 +2,8 @@
 name: 'bg'
 description: "A more convenient version of 'background'. Defaults to 'no-repeat' and prefixes your image path with img-path if you provide one."
 params:
-  path: 'Path to your image, prefixed with img-path if present.'
-  args: "Any other arguments you might pass to 'background'."
+  $path: 'Path to your image, prefixed with img-path if present.'
+  $args: "Any other arguments you might pass to 'background'."
 examples:
   - code: ".el\n  bg: '/path/to/image.jpg'"
     el: "<div class='bg'></div>"

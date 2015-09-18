@@ -2,8 +2,8 @@
 name: 'quantity-at-most'
 description: "<a href='https://github.com/pascalduez/postcss-quantity-queries'>Quantity query</a> to set rules for a selector based on a maxium number of <a href='http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/'>siblings</a>. To use, set it as a <a href='https://learnboost.github.io/stylus/docs/mixins.html#block-mixins'>block mixin</a> on the parent element. <a href='http://codepen.io/dbox/pen/waeQOL'>Demo here.</a>"
 params:
-  count: 'Maxium number of siblings'
-  selector: 'Css selector to be used. Default is <li>.'
+  $count: 'Maxium number of siblings'
+  $selector: 'Css selector to be used. Default is <li>.'
 examples:
   - code: "ul\n  +quantity-at-most(7)\n     border: 1px solid blue"
     el: "<div class='quantity-query at-most'><ul><li>one</li><li>two</li><li>three</li><li>four</li></ul><p>Since there are at most 7 list items, they are colored blue.</p></div>" 

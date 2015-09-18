@@ -2,8 +2,8 @@
 name: 'image-replace'
 description: "Standard image replacement. Pass it an image path and the image's dimensions and any text will be hidden in the div and it will show an image instead. Uses the fanciest new method, props to Paul Irish. Only works when called as a function with parens. Also aliased to 'ir'."
 params:
-  path: 'Path to the image. This is prefixed by img-path if set.'
-  dimensions: "Space-separated list of pixel values defining the image's dimensions."
+  $path: 'Path to the image. This is prefixed by img-path if set.'
+  $dimensions: "Space-separated list of pixel values defining the image's dimensions."
 examples:
   - code: "h1\n  ir('path/to.image.jpg', 300px 500px)"
     el: "<div class='ir'>Hello there!</div>"

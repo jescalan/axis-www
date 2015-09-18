@@ -2,8 +2,8 @@
 name: 'media'
 description: "Based on <a href='http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code'>Nicole Sullivan's media class</a>, made famous by Facebook. Put this on a parent and it will split the first two children left and right, like you would with perhaps a comment with an avatar to the left. Pass it a margin between the two. <a href='http://carrotblog.com/css-patterns-evolved'>Explained fully here</a>.<br/><br/>This mixin works right when the element you apply it to has two or three direct children. The first one will float to the left, the second one will be to the right of the first, and third will go farthest right."
 params:
-  margin: 'Margin between the two floated elements'
-  rightMargin: 'Optional margin to the right'
+  $margin: 'Margin between the two floated elements'
+  $right-margin: 'Optional margin to the right'
 examples:
   - code: ".media\n  media: 10px"
     el: "<div class='media'><img src='https://pbs.twimg.com/profile_images/3543879283/1509e34005183da5ea4eb29150f341e5_400x400.jpeg' /><p><strong>Steve Brule:</strong><br/>In 1971 Bill Grates invented Michaelsoft.</p></div>"

@@ -1,0 +1,14 @@
+---
+name: 'ellipsis'
+description: "Hyphenation is the better word-break. It’s locale aware, and inserts the hyphen character at the correct place, when breaking the words. This is especially important in responsive designs. It will save you from a lot of ragged lines. And, no need anymore for clunky & slow Javascript hyphenation fallbacks."
+params:
+  $width: 'Width of the container. Default is 100%'
+examples:
+- code: "p\n"
+  el: "<p>Sometimes you have to truncate verbose lines, and that's all there is to say.</p>"
+- code: "p\n  ellipsis()"
+  el: "<p class='ellipsis'>Sometimes you have to truncate verbose lines, and that's all there is to say.</p>"
+- code: "p\n  ellipsis(50px)"
+  el: "<p class='ellipsis short'>Sometimes you have to truncate verbose lines, and that's all there is to say.</p>"  
+_content: false
+---

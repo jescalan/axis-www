@@ -1,6 +1,13 @@
 ---
 name: 'bg-retina'
-description: "Make sure the image is double the size, pass it halved numbers, and you're in the retina-clear. Alternately, use svgs and don't use this mixin."
+description: "Make sure the image is double the size, pass it halved numbers, and you're in the retina-clear. 
+  <div class='tip'>
+    <h5>You may not need an extra retina image:</h5>
+    <ol>
+      <li><a href='https://css-tricks.com/using-svg/'>Use SVGs</a> whenever possible: tiny file-size, fully scalable without losing clarity. Seriously, these things are the best.
+      <li>When using JPGs: double the image resolution but crank the compression more than you normally would. This often results in <b>smaller</b> filesize for the @2x image versus the standard image at normal compression. The extra compression isn't noticeable on retina screens, because of the smaller pixels. It also looks great on non-retina screens because of browser resampling. Sounds too good to be true right? <a href='http://codepen.io/dbox/pen/PPmPaW'>See a demo here</a>. 
+  </div>
+  "
 params:
   $path: 'Path to the image. If you set img-path, no need to include that twice.'
   $width: "Width of the image. In this case it should be half the actual image's width"

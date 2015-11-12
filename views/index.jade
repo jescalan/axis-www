@@ -12,6 +12,7 @@ block content
       
       You can find the full source for axis [on github, here](https://github.com/jenius/axis).
 
+  // Usage
   .instruction
     h1#usage Usage
     :marked
@@ -121,6 +122,103 @@ block content
 
       If there's another build pipeline that you are struggling to get axis integrated with, [open up an issue](https://github.com/jenius/axis-www), and we can try to add instructions here!
 
+
+  // Settings  
+  .intro
+    h1#settings Settings
+    p Axis has a simple built-in settings file with common variables shared across 
+      the mixins. Overwrite any of these defaults in your project where needed.
+      document.
+  
+  section.settings-container
+    :marked
+      ### Font stacks
+      Shortcuts to common font stacks.
+      ```stylus
+      $helvtica-neue = "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif
+      $helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif
+      $georgia = Georgia, Cambria, "Times New Roman", Times, serif
+      $lucidia-grande = "Lucida Grande", Tahoma, Verdana, Arial, sans-serif
+      $monospace = unquote("'Bitstream Vera Sans Mono', Consolas, Courier, monospace")
+      $verdana = Verdana, Geneva, sans-serif   
+      ```
+      ### Default font settings
+      Some reasonable defaults for typography.
+      ```stylus
+      $font-stack = $helvetica-neue
+      $font-size = 16
+      $font-color = #555
+      ```
+      ### Colors
+      Axis provides an alternative pallete to default html colors. These are accessible as variables or by calling the color name directly. ie: <code>background: teal</code>. Based on [http://clrs.cc](http://clrs.cc) (slightly modded).
+     
+    ul.colors
+      li.navy
+        code $navy = #001F3F 
+      li.blue
+        code $blue = #0074D9 
+      li.aqua
+        code $aqua = #7FDBFF 
+      li.teal
+        code $teal = #39CCCC 
+      li.olive  
+        code $olive = #3D9970 
+      li.green
+        code $green = #2ECC40 
+      li.lime
+        code $lime = #01FF70 
+      li.yellow
+        code $yellow = #FFDC00          
+      li.orange  
+        code $orange = #FF851B 
+      li.red
+        code $red = #D13F19 
+      li.maroon
+        code $maroon = #85144B
+      li.fuchsia
+        code $fuchsia = #F012BE
+      li.purple
+        code $purple = #B10DC9
+      li.white
+        code $white = #FFFFFF  
+      li.silver
+        code $silver = #DDDDDD     
+      li.gray
+        code $gray = #AAAAAA  
+      li.black      
+        code $black = #222222 
+    div.tip
+      h5 Did you know?
+      p 
+        :marked
+          There are [140 named hex colors](http://www.w3schools.com/html/html_colornames.asp) like **honeydew**, **tomato**, and **mistyrose**. Need inspiration when naming your own custom color variables? Try [Name that Color](http://chir.ag/projects/name-that-color/).                                                   
+    :marked
+      ### Default color
+      ```
+      $default-color = $blue
+      ```
+      This sets the color for various primary elements. Used in [blockquote](#blockquote), [button](#button), [figure](#figure), [link](#link), [hover-glow](#hover-glow)
+
+      ### Text selection
+      ```
+      $text-selection = $blue
+      ```
+      Used in [text-selection](#text-selection) this sets the text highlight color.
+
+      ### Image path
+      ```
+      $img-path = ''
+      ```
+      This custom image base path is used in [image-replace](#image-replace), [bg](#bg), & [bg-retina](#bg-retina). It's handy for your custom seletors and mixins as well.
+
+      ### Ligatures
+      ```
+      $ligatures = 'false'
+      ```
+      Enables Opentype ligatures. Used in [paragraph](#paragraph).
+
+
+  // Easing
   .intro
     h1#easing Easing
     p While the dieties of css have been kind enough to provide us with a couple of basic easing functions for transitions, some of us like to go all out on crazy easing effects. If you fit this description, do not fret, axis has got you covered in that department.
@@ -208,6 +306,7 @@ block content
       h6 $ease-in-out-swift
       span
 
+  // Buttons
   .intro
     h1#buttons Buttons
     p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
@@ -215,6 +314,7 @@ block content
   each mxin, i in site.modules.buttons
     +doc(mxin, site.modules.buttons.length, i)
 
+  // Code Blocks
   .intro
     h1#code_blocks Code Blocks
     p A small collection of simple and polished styles for code blocks.
@@ -222,6 +322,7 @@ block content
   each mxin, i in site.modules.code_blocks
     +doc(mxin, site.modules.code_blocks.length, i)
 
+  // Forms
   .intro
     h1#forms Forms
     p Forms are a huge pain. This light set of mixins attempt to eliminate some of the pain without forcing your hand in regards to markup structure.
@@ -229,6 +330,7 @@ block content
   each mxin, i in site.modules.forms
     +doc(mxin, site.modules.forms.length, i)
 
+  // Gradients
   .intro
     h1#gradients Gradients
     :marked
@@ -237,6 +339,7 @@ block content
   each mxin, i in site.modules.gradients
     +doc(mxin, site.modules.gradients.length, i)
 
+  // Images
   .intro
     h1#images Images
     :marked
@@ -245,14 +348,15 @@ block content
   each mxin, i in site.modules.images
     +doc(mxin, site.modules.images.length, i)
 
-
+  // Interaction
   .intro
     h1#interaction Interaction
     p Stylus is unique among css preprocessors for it's ability to access values from parent elements. This makes interaction-based mixins like these not only possible, but much more clean and DRY.
 
   each mxin, i in site.modules.interaction
     +doc(mxin, site.modules.interaction.length, i)
-    
+  
+  // Layout  
   .intro
     h1#layout Layout
     p A few mixins to help tame those layouts.
@@ -260,13 +364,15 @@ block content
   each mxin, i in site.modules.layout
     +doc(mxin, site.modules.layout.length, i)    
 
+  // Reset
   .intro
     h1#reset Reset
     p Reset all the things.
-    
+  
   each mxin, i in site.modules.reset
-    +doc(mxin, site.modules.reset.length, i)    
-
+    +doc(mxin, site.modules.reset.length, i)  
+     
+  // Tables
   .intro
     h1#tables Tables
     p Right now, the "tables" section consists of just one mixin, for prettifying tables. But who knows, it might expand in the future if people love tables enough!
@@ -274,6 +380,7 @@ block content
   each mxin, i in site.modules.tables
     +doc(mxin, site.modules.tables.length, i)
 
+  // Typography
   .intro
     h1#typography Typography
     p A set of helpers and beautiful defaults for all aspects of typography.
@@ -281,6 +388,7 @@ block content
   each mxin, i in site.modules.typography
     +doc(mxin, site.modules.typography.length, i)
 
+  // Ui
   .intro
     h1#ui UI
     p A set of flexible shortcuts for creating common UI elements.
@@ -288,6 +396,7 @@ block content
   each mxin, i in site.modules.ui
     +doc(mxin, site.modules.ui.length, i)
 
+  // Utilities
   .intro
     h1#utilities Utilities
     p A grab bag of various useful mixins that don't fit into any other category.

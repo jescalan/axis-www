@@ -1,0 +1,113 @@
+.settings-container
+   padding-bottom: 2rem
+
+  p
+    margin: .5em 0 0 0
+
+    > code
+      code()
+      font-size: .75em
+  h3
+    margin: 2em 0 0
+
+  h4
+    margin: 1em 0
+
+  h5
+    margin-bottom: 0
+
+  pre code
+    pre()
+    font-size: .75em
+    padding: 20px
+
+    *
+      font-family: fira-mono, monospace
+
+// color grid
+ul.colors
+  reset-list()
+  group()
+  margin-top: 2em
+
+  // homemade jeet :D
+  li
+    width: 48.5%
+    float: left
+    padding-top: 5%
+    margin-bottom: 3%
+    border-radius: 3px
+    border: 1px solid #eee
+
+    &:hover
+      border: 1px solid #ddd
+
+    +below(900px)
+      &:nth-of-type(4n-1)
+      &:nth-of-type(4n-3)
+        margin-right: 3%
+
+    +above(900px)
+      width: 22.75%
+
+      &:not(:nth-of-type(4n))
+        margin-right: 3%
+
+    &.navy
+      background: $navy
+
+    &.blue
+      background: $blue
+
+    &.aqua
+      background: $aqua
+
+    &.teal
+      background: $teal
+
+    &.olive
+      background: $olive
+
+    &.green
+      background: $green
+
+    &.lime
+      background: $lime
+
+    &.yellow
+      background: $yellow
+
+    &.orange
+      background: $orange
+
+    &.red
+      background: $red
+
+    &.maroon
+      background: $maroon
+
+    &.fuchsia
+      background: $fuchsia
+
+    &.purple
+      background: $purple
+
+    &.white
+      background: $white
+
+    &.silver
+      background: $silver
+
+    &.gray
+      background: $gray
+
+    &.black
+      background: $black
+
+    code
+      background: white
+      display: block
+      padding: 5px 5px 7px
+      font-size: 12px
+      text-align: center
+      border-top: none

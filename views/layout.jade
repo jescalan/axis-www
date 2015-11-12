@@ -28,6 +28,16 @@ html
         ul
           li(data-id='installation'): a(href='#installation') Installation
           li(data-id='usage'): a(href='#usage') Usage
+          li(data-id='settings')
+            a(href='#settings') Settings
+              ul
+                li(data-id='font-stacks'): a(href="#font-stacks") Font stacks              
+                li(data-id='default-font-settings'): a(href="#default-font-settings") Font settings  
+                li(data-id='colors'): a(href="#colors") Colors  
+                li(data-id='default-color'): a(href="#default-color") Default color                  
+                li(data-id='text-selection'): a(href="#text-selection") Text selection  
+                li(data-id='image-path'): a(href="#image-path") Image path  
+                li(data-id='ligatures'): a(href="#ligatures") Ligatures  
           li(data-id='easing'): a(href='#easing') Easing
           each module in modules.sort()
             li(data-id=module)

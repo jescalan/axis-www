@@ -1,0 +1,11 @@
+---
+name: "autofill"
+description: "When forms are auto-filled, the background color for the inputs (ie: pale yellow) can be very jarring, especially if you have a dark background.  This allows you to override that."
+params:
+  $background: "Background color. Default is blue, but you'll probably want to change this."
+  $color: "Text color. Default is white."  
+examples:
+  - code: "input\n  autofill(green, white)"
+    el: "<div><label>Email: </label><input name='email' type='text' class='input' /></div>"
+_content: false
+---

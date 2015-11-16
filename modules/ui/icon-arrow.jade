@@ -1,0 +1,17 @@
+---
+name: 'icon-arrow'
+description: 'Creates a clean, customizable arrow icon in pure css. Useful for navigation.'
+params:
+  $direction: 'Direction the arrow "up", "down", "left", or "right". Default is "right".'
+  $size: 'Size of the icon. Default is 40px.'
+  $color: 'Color of the icon. Default is #888.'
+  $stroke: 'Icon line width. Default is 1px.'
+examples:
+  - code: "span\n  icon-arrow()"
+    el: "<span class='arrow'></span>"
+  - code: ".arrow-left\n  icon-arrow(left, 20px, blue, 3px)"
+    el: "<span class='arrow-left'></span>"
+  - code: ".arrow-down\n  icon-arrow(down, 50px, blue, 7px)"
+    el: "<span class='arrow-down'></span>"
+_content: false
+---

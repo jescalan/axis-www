@@ -103,15 +103,16 @@ block content
 
       ```js
       var express = require('express'),
+          stylus = requiere('stylus'),
           axis = require('axis');
 
       var app = express()
 
-      app.middleware({
+      app.use(stylus.middleware({
         src: __dirname,
         dest: __dirname  '/public',
         compile: compile
-      });
+      }));
 
       function compile(str, path){
         return stylus(str)

@@ -133,7 +133,7 @@ block content
   
   section.settings-container
     :marked
-      ### Font stacks
+      ### Font Stacks
       Shortcuts to common font stacks.
       ```stylus
       $helvtica-neue = "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif
@@ -143,7 +143,7 @@ block content
       $monospace = unquote("'Bitstream Vera Sans Mono', Consolas, Courier, monospace")
       $verdana = Verdana, Geneva, sans-serif   
       ```
-      ### Default font settings
+      ### Default Font Settings
       Some reasonable defaults for typography.
       ```stylus
       $font-stack = $helvetica-neue
@@ -200,12 +200,14 @@ block content
       ```
       This sets the color for various primary elements. Used in [blockquote](#blockquote), [button](#button), [figure](#figure), [link](#link), [hover-glow](#hover-glow)
 
-      ### Text selection
+    h3#text-selection-setting Text selection
+    
+    :marked
       ```
       $text-selection = $blue
       ```
       Used in [text-selection](#text-selection) this sets the text highlight color.
-
+      
       ### Image path
       ```
       $img-path = ''
@@ -311,7 +313,7 @@ block content
   .intro
     h1#buttons Buttons
     p Axis' buttons are extremely flexible to be able to fit any situation. They come in two flavors, the basic default button and the glossy button.
-
+    
   each mxin, i in site.modules.buttons
     +doc(mxin, site.modules.buttons.length, i)
 

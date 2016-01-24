@@ -8,13 +8,13 @@ body, html
   height: 100%
 
 *
-  font-family: freight-sans-pro
+  font-family: Roboto, sans-serif
 
 .contain
   height: 100%
 
 header
-  background: red
+  background: $default
   text-align: center
   color: #333
   padding: 65px 0
@@ -22,11 +22,12 @@ header
   h1
     ir('title.svg', 144px 43px)
     margin: 0 auto 15px auto
+    font-weight: 500
 
   h2
     normal()
-    font-weight: 400
-    font-size: 1em
+    font-weight: 300
+    font-size: .9em
     margin: 0
 
 .sticky-wrapper
@@ -43,7 +44,7 @@ nav
   overflow-y: scroll
 
   .logo-small
-    background: red
+    background: $default
     width: 100%
     cursor: pointer
     height: 0
@@ -71,8 +72,9 @@ nav
 
     li
       font-size: 1.3em
-      font-weight: 500
-      margin-bottom: 10px
+      font-weight: 300
+      margin-bottom: 12px
+      color: #353B41
 
       a
         reset-link()
@@ -83,15 +85,17 @@ nav
           opacity: .7
 
         &.active
-          color: red
+          color: $default
+          font-weight: 500
 
       ul
         reset-list()
         display: none
+        margin-top: 9px
 
         li
           font-size: .8em
-          font-weight: 400
+          font-weight: 300
           margin-left: 15px
           margin: 6px 0 6px 15px
 
@@ -104,10 +108,10 @@ main
 
 section
   margin: 25px 5%
-  max-width: 675px
+  max-width: 50em
 
   > p a
-    link: red
+    link: $default
 
 .instruction
   padding: 0 5%
@@ -121,11 +125,14 @@ section
       font-size: .75em
 
   a
-    link: red
+    link: $default
     transition()
 
   h1
-    margin: .5em 0
+    margin: .7em 0
+    font-size: 1.8em
+    font-weight: 300
+    color: #353B41
 
   &:first-child h1
     margin-top: 0
@@ -151,7 +158,7 @@ section
     max-width: 650px
 
   a
-    link: red
+    link: $default
     transition()
 
 h1, h2, h3, h4, h5, h6
@@ -160,13 +167,12 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: 2em
   font-weight: 400
-  -webkit-font-smoothing: subpixel-antialiased
   margin: 0
   cursor: pointer
 
 h3
   font-family: fira-mono, monospace
-  color: red
+  color: $default
   margin-top: 0
   cursor: pointer
   position: relative
@@ -190,14 +196,15 @@ h4
   border-bottom: 1px solid darken($light-grey, 5%)
 
 p
-  color: #7c7c7c
+  color: #65717B
   font-size: 17px
-  line-height: 1.5em
+  line-height: 1.6em
+  font-weight: 300
+  -webkit-font-smoothing: subpixel-antialiased
 
 hr
   border: 1px solid $light-grey
   margin: 30px auto
-  // ir('divider.svg', 423px 27px)
 
 dt
   font-family: fira-mono, monospace
@@ -236,12 +243,13 @@ dd
     margin: .2rem .5rem 0
   p
     padding: 0 .5rem
-    
+
   li
     margin-bottom: 10px
 
   a
     link()
+
 // Stack the pre and el for small resolutions
 +below(800px)
   .example
@@ -249,14 +257,12 @@ dd
     border-radius: 4px
     margin: 1em 0 0
 
-
     pre
       border: none
       border-radius: 0
       float: none
       margin: 0
       width: 100%
-
 
   .el
     width: 100%

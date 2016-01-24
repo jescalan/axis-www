@@ -8,7 +8,7 @@ css_pipeline = require 'css-pipeline'
 require('string').extendPrototype()
 
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore']
+  ignores: ['readme.md', 'views/layout.jade', '**/_*', '.gitignore']
 
   stylus:
     use: [axis(), rupture(), autoprefixer()]

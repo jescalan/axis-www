@@ -20,7 +20,7 @@ block content
 
       Before we start with the different build system integrations though, I want to note the single option that you can initialize axis with. By default, axis will auto-import itself into all your stylesheets. This is purely for convenience -- axis only defines mixins, so it's invisible if you don't use any of it's mixins anyway. However, if you'd rather not have it do this, you can initialize axis with `{ implicit: false }`, then you'll need to manually `@import` it in your stylus in order to use it. Ok, on to integrations.
 
-    h4 Standalone
+    h4#standalone Standalone
 
     :marked
       Using axis with a straight up stylus pipeline is fairly simple with the [use function](http://learnboost.github.io/stylus/docs/js.html#usefn). The code below demonstrates a simple use case.
@@ -37,7 +37,7 @@ block content
         .render(console.log.bind(console));
       ```
 
-    h4 Accord &amp; Roots
+    h4#accord-roots Accord &amp; Roots
 
     :marked
       [Accord](https://github.com/jenius/accord) is a clean and uniform interface to a large number of compiled languages. It's used behind the scenes of a number of libraries, including the wonderful static site build tool [roots](http://roots.cx). It's stylus adapter is [fully documented](https://github.com/jenius/accord/blob/master/docs/stylus.md), and includes ['use'](https://github.com/jenius/accord/blob/master/docs/stylus.md#use) similar to the direct stylus API. Here's an example of how it would look loading in axis.
@@ -60,7 +60,7 @@ block content
         stylus: { use: axis() }
       ```
 
-    h4 Gulp
+    h4#gulp Gulp
 
     :marked
       You can use accord directly with gulp if you'd like through the [gulp-accord](https://github.com/carrot/gulp-accord) plugin, which can compile any of the languages accord supports, or use the [gulp-stylus](https://github.com/stevelacy/gulp-stylus) plugin, which also uses accord under the hood. Here's how it would look with gulp-stylus:
@@ -77,7 +77,7 @@ block content
       });
       ```
 
-    h4 Grunt
+    h4#grunt Grunt
 
     :marked
       Although grunt's stylus plugin doesn't use accord, it takes very similar options, and will look almost the same, although a lot more verbose than gulp, but that's just how grunt is. Here's how a snippet of the config would look in use:
@@ -93,7 +93,7 @@ block content
       }
       ```
 
-    h4 Express
+    h4#express Express
 
     :marked
       Stylus actually has [very nice documentation on its own site](http://learnboost.github.io/stylus/docs/middleware.html) on how to use it with express, so follow this to get stylus set up. Beyond that, just `use` axis in the pipeline as is described in the standalone section above. Example of this in action:
@@ -128,9 +128,9 @@ block content
       the mixins. Overwrite any of these defaults in your project where needed.
       document.
   
-  section.settings-container
+  .instruction
     :marked
-      ### Font Stacks
+      #### Font Stacks
       Shortcuts to common font stacks.
       ```stylus
       $helvtica-neue = "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif
@@ -140,14 +140,14 @@ block content
       $monospace = unquote("'Bitstream Vera Sans Mono', Consolas, Courier, monospace")
       $verdana = Verdana, Geneva, sans-serif   
       ```
-      ### Default Font Settings
+      #### Default Font Settings
       Some reasonable defaults for typography.
       ```stylus
       $font-stack = $helvetica-neue
       $font-size = 16
       $font-color = #555
       ```
-      ### Colors
+      #### Colors
       Axis provides an alternative pallete to default html colors. These are accessible as variables or by calling the color name directly. ie: <code>background: teal</code>. Based on [http://clrs.cc](http://clrs.cc) (slightly modded).
      
     ul.colors
@@ -191,13 +191,13 @@ block content
         :marked
           There are [140 named hex colors](http://www.w3schools.com/html/html_colornames.asp) like **honeydew**, **tomato**, and **mistyrose**. Need inspiration when naming your own custom color variables? Try [Name that Color](http://chir.ag/projects/name-that-color/).                                                   
     :marked
-      ### Default color
+      #### Default color
       ```
       $default-color = $blue
       ```
       This sets the color for various primary elements. Used in [blockquote](#blockquote), [button](#button), [figure](#figure), [link](#link), [hover-glow](#hover-glow)
 
-    h3#text-selection-setting Text selection
+    h4#text-selection-setting Text selection
     
     :marked
       ```
@@ -205,13 +205,13 @@ block content
       ```
       Used in [text-selection](#text-selection) this sets the text highlight color.
       
-      ### Image path
+      #### Image path
       ```
       $img-path = ''
       ```
       This custom image base path is used in [image-replace](#image-replace), [bg](#bg), & [bg-retina](#bg-retina). It's handy for your custom seletors and mixins as well.
 
-      ### Ligatures
+      #### Ligatures
       ```
       $ligatures = 'false'
       ```

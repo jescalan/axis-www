@@ -6,9 +6,9 @@ $ ->
   $('nav').waypoint('sticky')
 
   # scroll spy nav
-  $('main .intro h1, main .instruction h1, main h3').waypoint ->
+  $('main .intro h1, main .instruction h1, .instruction h4, main h3').waypoint ->
     id = $(@).attr('id')
-    
+
     # expand and contract lists
     $('nav li > ul').hide()
     parent_cat = $("nav li[data-id=#{id}]").parent().parent('li')
@@ -35,7 +35,7 @@ $ ->
     history.pushState(null, null, "##{id}")
 
   # on doc headline click, hash the url
-  $('main h1, main h3').on 'click', ->
+  $('main h1, main h3, .instruction h4').on 'click', ->
     history.pushState(null, null, "##{$(@).attr('id')}")
 
   # on nav logo click, scroll back to top

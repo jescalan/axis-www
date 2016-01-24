@@ -4,6 +4,21 @@ normalize-css()
 base()
 border-box-html()
 
+// link icon mixin
+link-icon()
+  &:before
+    content: ""
+    size: 12px
+    bg: 'link-icon.svg'
+    absolute: top 8px left -7px
+    opacity: 0
+    transition()
+
+  &:hover
+    &:before
+      left: -20px
+      opacity: 1
+
 body, html
   height: 100%
 
@@ -143,6 +158,9 @@ section
     margin: 1em 0
     font-size: 1.2em
     padding-bottom: 4px
+    cursor: pointer
+    position: relative
+    link-icon()
 
   pre code
     pre()
@@ -180,19 +198,7 @@ h3
   margin-top: 0
   cursor: pointer
   position: relative
-
-  &:before
-    content: ""
-    size: 12px
-    bg: 'link-icon.svg'
-    absolute: top 8px left -7px
-    opacity: 0
-    transition()
-
-  &:hover
-    &:before
-      left: -20px
-      opacity: 1
+  link-icon()
 
 h4
   color: #6D6D6D

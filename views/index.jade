@@ -45,12 +45,9 @@ block content
       ```js
       var accord = require('accord'),
           axis = require('axis'),
-          fs = require('fs');
+          styl = accord.load('stylus');
 
-      var styl = accord.load('stylus');
-      var code = fs.readFileSync('/path/to/file.styl', 'utf8');
-
-      styl.render(code, { use: axis() })
+      styl.renderFile('/path/to/file.styl', { use: axis() })
         .then(console.log.bind(console))
       ```
 

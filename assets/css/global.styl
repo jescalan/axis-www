@@ -56,9 +56,11 @@ header
     display: none
 
 nav
-  background: $grey
+  background: $light-grey
+  border-right: 1px solid rgba(#000, .03)
   height: 100%
   overflow-y: scroll
+
 
   .logo-small
     background: $main-bg
@@ -88,7 +90,7 @@ nav
     padding: 20px 30px 30px 30px
 
     li
-      font-size: 1.3em
+      font-size: 1
       font-weight: 300
       margin-bottom: 12px
       color: #353B41
@@ -117,7 +119,7 @@ nav
           margin: 6px 0 6px 15px
 
 main
-  padding: 20px 0
+  padding: 4% 0
   margin-left: 22%
 
   +below(800px)
@@ -131,7 +133,7 @@ section
     link: $default
 
 .instruction
-  padding: 0 5%
+  padding: 0 5% 3%
   max-width: 50em
 
   p
@@ -155,7 +157,7 @@ section
     margin-top: 0
 
   h4
-    margin: 1em 0
+    margin: 2em 0 1em
     font-size: 1.2em
     padding-bottom: 4px
     cursor: pointer
@@ -207,7 +209,7 @@ h4
 
 p
   color: #65717B
-  font-size: 17px
+  font-size: rem(16px)
   line-height: 1.6em
   font-weight: 300
   -webkit-font-smoothing: subpixel-antialiased

@@ -137,11 +137,11 @@ section
   max-width: 50em
 
   p
-    margin: .5em 0 0 0
+    margin: 1em 0 0 0
 
     > code
       code: $blue
-      font-size: .75em
+      // font-size: .75em
 
   a
     link: $default
@@ -166,11 +166,13 @@ section
 
   pre code
     pre()
-    font-size: .8em
-    padding: 20px
+    font-family: $monospace
+    padding: 1.5% 2.5%
+    font-size: rem(16px)
 
     *
-      font-family: fira-mono, monospace
+      font-family: $monospace
+      font-size: rem(16px)
 
 .intro
   background: $light-grey
@@ -195,7 +197,7 @@ h1
   cursor: pointer
 
 h3
-  font-family: fira-mono, monospace
+  font-family: $monospace
   color: $default
   margin-top: 0
   cursor: pointer
@@ -219,7 +221,7 @@ hr
   margin: 30px auto
 
 dt
-  font-family: fira-mono, monospace
+  font-family: $monospace
 
   &:after
     content: ":"
@@ -236,11 +238,11 @@ dd
   pre
     width: 50%
     float: left
-    background: $grey
-    border: 1px solid darken($grey, 10%)
+    background: $light-grey
+    border: 1px solid darken($light-grey, 10%)
     border-radius: 4px
     padding: 15px
-    font-family: fira-mono, monospace
+    font-family: $monospace
     font-size: .9em
 
 .el

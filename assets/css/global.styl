@@ -140,7 +140,6 @@ section
 
     > code
       code: $blue
-      // font-size: .75em
 
   a
     link: $default
@@ -165,6 +164,9 @@ section
 
   pre code
     pre()
+    background: #282c34
+    color: #c1c9d7 !important
+    border: 1px solid darken(#282c34, 10%)
     font-family: $monospace
     padding: 1.5% 2.5%
     font-size: 1rem
@@ -174,9 +176,11 @@ section
       font-size: 1rem
 
 .intro
-  background: $light-grey
+  background: rgba($light-grey, .5)
   padding: 25px 5%
   margin-top: 25px
+  border-top: 1px solid $light-grey
+  border-bottom: 1px solid $light-grey
 
   p
     margin: .5em 0 0 0
@@ -237,12 +241,13 @@ dd
   pre
     width: 50%
     float: left
-    background: $light-grey
-    border: 1px solid darken($light-grey, 10%)
+    background: #282c34
+    border: 1px solid darken(#282c34, 10%)
     border-radius: 4px
+    color: #c1c9d7
     padding: 15px
     font-family: $monospace
-    font-size: .9em
+    font-size: 1em
 
 .el
   width: 50%

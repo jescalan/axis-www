@@ -8,16 +8,14 @@ html
     meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1')
     link(rel='icon', type='image/png', href='img/favicon.png')
     title Axis
-    script(src="//use.typekit.net/ddj0mjr.js")
-    script.
-      try{Typekit.load();}catch(e){}
-    link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css')   
     != css()
   body
 
     header
       h1 Axis
-      h2 a magical utility belt for stylus
+      h2 a utility belt for stylus
 
     .contain
 
@@ -27,7 +25,14 @@ html
         .logo-small: h2 Axis
         ul
           li(data-id='installation'): a(href='#installation') Installation
-          li(data-id='usage'): a(href='#usage') Usage
+          li(data-id='usage')
+            a(href='#usage') Usage
+            ul
+              li(data-id='standalone'): a(href='#standalone') Standalone
+              li(data-id='accord-roots'): a(href='#accord-roots') Accord &amp; Roots
+              li(data-id='gulp'): a(href='#gulp') Gulp
+              li(data-id='grunt'): a(href='#grunt') Grunt
+              li(data-id='express'): a(href='#express') Express
           li(data-id='settings')
             a(href='#settings') Settings
               ul
@@ -35,7 +40,7 @@ html
                 li(data-id='default-font-settings'): a(href="#default-font-settings") Font settings  
                 li(data-id='colors'): a(href="#colors") Colors  
                 li(data-id='default-color'): a(href="#default-color") Default color                  
-                li(data-id='text-selection'): a(href="#text-selection") Text selection  
+                li(data-id='text-selection-setting'): a(href="#text-selection-setting") Text selection  
                 li(data-id='image-path'): a(href="#image-path") Image path  
                 li(data-id='ligatures'): a(href="#ligatures") Ligatures  
           li(data-id='easing'): a(href='#easing') Easing

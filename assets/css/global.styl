@@ -4,30 +4,48 @@ normalize-css()
 base()
 border-box-html()
 
+// link icon mixin
+link-icon()
+  &:before
+    content: ""
+    size: 12px
+    bg: 'link-icon.svg'
+    absolute: top 8px left -7px
+    opacity: 0
+    transition()
+
+  &:hover
+    &:before
+      left: -20px
+      opacity: 1
+
 body, html
   height: 100%
 
 *
-  font-family: freight-sans-pro
+  font-family: Roboto, sans-serif
 
 .contain
   height: 100%
 
 header
-  background: red
+  background: $main-bg
   text-align: center
   color: #333
-  padding: 65px 0
+  padding: 85px 0
 
   h1
     ir('title.svg', 144px 43px)
     margin: 0 auto 15px auto
+    font-weight: 500
+    color: white
 
   h2
     normal()
-    font-weight: 400
-    font-size: 1em
+    font-weight: 300
+    font-size: .9em
     margin: 0
+    color: white
 
 .sticky-wrapper
   width: 22%
@@ -38,12 +56,13 @@ header
     display: none
 
 nav
-  background: $grey
+  background: $light-grey
   height: 100%
   overflow-y: scroll
 
+
   .logo-small
-    background: red
+    background: $main-bg
     width: 100%
     cursor: pointer
     height: 0
@@ -70,9 +89,10 @@ nav
     padding: 20px 30px 30px 30px
 
     li
-      font-size: 1.3em
-      font-weight: 500
-      margin-bottom: 10px
+      font-size: 1.15rem
+      font-weight: 300
+      margin-bottom: 12px
+      color: #353B41
 
       a
         reset-link()
@@ -83,20 +103,22 @@ nav
           opacity: .7
 
         &.active
-          color: red
+          color: $default
+          font-weight: 500
 
       ul
         reset-list()
         display: none
+        margin-top: 9px
 
         li
           font-size: .8em
-          font-weight: 400
+          font-weight: 300
           margin-left: 15px
           margin: 6px 0 6px 15px
 
 main
-  padding: 20px 0
+  padding: 4% 0
   margin-left: 22%
 
   +below(800px)
@@ -104,54 +126,68 @@ main
 
 section
   margin: 25px 5%
-  max-width: 675px
+  max-width: 50em
 
   > p a
-    link: red
+    link: $default
 
 .instruction
-  padding: 0 5%
-  max-width: 675px
+  padding: 0 5% 3%
+  max-width: 50em
 
   p
-    margin: .5em 0 0 0
+    margin: 1em 0 0 0
 
     > code
-      code()
-      font-size: .75em
+      code: $blue
 
   a
-    link: red
+    link: $default
     transition()
 
   h1
-    margin: .5em 0
+    margin: .7em 0
+    font-size: 1.8em
+    font-weight: 300
+    color: #353B41
 
   &:first-child h1
     margin-top: 0
 
   h4
-    margin: 1em 0
+    margin: 2em 0 1em
+    font-size: 1.2em
+    padding-bottom: 4px
+    cursor: pointer
+    position: relative
+    link-icon()
 
   pre code
     pre()
-    font-size: .75em
-    padding: 20px
+    background: #282c34
+    color: #c1c9d7 !important
+    border: 1px solid darken(#282c34, 10%)
+    font-family: $monospace
+    padding: 1.5% 2.5%
+    font-size: 1rem
 
     *
-      font-family: fira-mono, monospace
+      font-family: $monospace
+      font-size: 1rem
 
 .intro
-  background: $light-grey
+  background: rgba($light-grey, .5)
   padding: 25px 5%
   margin-top: 25px
+  border-top: 1px solid $light-grey
+  border-bottom: 1px solid $light-grey
 
   p
     margin: .5em 0 0 0
     max-width: 650px
 
   a
-    link: red
+    link: $default
     transition()
 
 h1, h2, h3, h4, h5, h6
@@ -160,29 +196,16 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: 2em
   font-weight: 400
-  -webkit-font-smoothing: subpixel-antialiased
   margin: 0
   cursor: pointer
 
 h3
-  font-family: fira-mono, monospace
-  color: red
+  font-family: $monospace
+  color: $default
   margin-top: 0
   cursor: pointer
   position: relative
-
-  &:before
-    content: ""
-    size: 12px
-    bg: 'link-icon.svg'
-    absolute: top 8px left -7px
-    opacity: 0
-    transition()
-
-  &:hover
-    &:before
-      left: -20px
-      opacity: 1
+  link-icon()
 
 h4
   color: #6D6D6D
@@ -190,17 +213,18 @@ h4
   border-bottom: 1px solid darken($light-grey, 5%)
 
 p
-  color: #7c7c7c
-  font-size: 17px
-  line-height: 1.5em
+  color: #65717B
+  font-size: 1rem
+  line-height: 1.6em
+  font-weight: 300
+  -webkit-font-smoothing: subpixel-antialiased
 
 hr
   border: 1px solid $light-grey
   margin: 30px auto
-  // ir('divider.svg', 423px 27px)
 
 dt
-  font-family: fira-mono, monospace
+  font-family: $monospace
 
   &:after
     content: ":"
@@ -209,6 +233,7 @@ dd
   color: #8b8b8b
   font-size: 17px
   line-height: 1.5em
+  font-weight: 300
 
 .example
   group()
@@ -216,12 +241,13 @@ dd
   pre
     width: 50%
     float: left
-    background: $grey
-    border: 1px solid darken($grey, 10%)
+    background: #282c34
+    border: 1px solid darken(#282c34, 10%)
     border-radius: 4px
+    color: #c1c9d7
     padding: 15px
-    font-family: fira-mono, monospace
-    font-size: .9em
+    font-family: $monospace
+    font-size: 1em
 
 .el
   width: 50%
@@ -232,16 +258,19 @@ dd
   area(#ecf6fa)
   padding-right: 1.5rem
 
+
   h5
     margin: .2rem .5rem 0
   p
     padding: 0 .5rem
-    
+    font-size: rem(13px)
+
   li
     margin-bottom: 10px
 
   a
     link()
+
 // Stack the pre and el for small resolutions
 +below(800px)
   .example
@@ -249,14 +278,12 @@ dd
     border-radius: 4px
     margin: 1em 0 0
 
-
     pre
       border: none
       border-radius: 0
       float: none
       margin: 0
       width: 100%
-
 
   .el
     width: 100%
